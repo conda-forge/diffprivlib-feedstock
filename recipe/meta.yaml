@@ -1,5 +1,5 @@
 {% set name = "diffprivlib" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8dba0a65ecd52c79b71d8f3837228386a154df7039fa149eb06bc48b707b9bfa
+  sha256: bf9260b6099fe9ebca05e62313bc4f9ab2d0f054b69cf5c3d37182a7d34712ed
 
 build:
   noarch: python
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: "IBM Differential Privacy Library"
+  summary: IBM Differential Privacy Library
   doc_url: https://pypi.org/project/diffprivlib/
   dev_url: https://github.com/IBM/differential-privacy-library
 
