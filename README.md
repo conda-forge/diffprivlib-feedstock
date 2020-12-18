@@ -5,11 +5,13 @@ Home: https://github.com/IBM/differential-privacy-library
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/diffprivlib-feedstock/blob/master/LICENSE.txt)
 
 Summary: IBM Differential Privacy Library
 
+Development: https://github.com/IBM/differential-privacy-library
 
+Documentation: https://pypi.org/project/diffprivlib/
 
 Current build status
 ====================
