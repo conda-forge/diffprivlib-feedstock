@@ -1,37 +1,40 @@
 {% set name = "diffprivlib" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.1" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d2a154d83272e06bc5ba08b1c733e1fe544de74b35e5ee32c495a5bee7cd439f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffprivlib-{{ version }}.tar.gz
+  sha256: 81de6532ea6ab5e3d6b90f8ef866ab6cc1f2f5610a4ea1ddb6913de5daf70b2d
 
 build:
+  number: 0
   noarch: python
-  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.7
   run:
-    - joblib >=0.13.2
-    - numpy >=1.15.0
-    - python
-    - scikit-learn >=0.20.3
-    - scipy >=1.2.1
+    - joblib >=0.16.0
+    - numpy >=1.19.0
+    - python >=3.7
+    - scikit-learn >=0.23.0
+    - scipy >=1.5.0
+    - setuptools >=49.0.0
 
 test:
   imports:
     - diffprivlib
     - diffprivlib.mechanisms
-    - diffprivlib.mechanisms.transforms
-    - diffprivlib.models
-    - diffprivlib.tools
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/IBM/differential-privacy-library
