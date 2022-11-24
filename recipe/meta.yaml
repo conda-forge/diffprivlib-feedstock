@@ -1,5 +1,5 @@
 {% set name = "diffprivlib" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffprivlib-{{ version }}.tar.gz
-  sha256: e939666ecf1c663bcd833c6dd59cbf9ef67e9211a7df72e4a96ecf578737dd98
+  sha256: 739c2c272ab458183e0941e65a2b52f643283edf6e54de66ff6d2d00c78ecfdd
 
 build:
   number: 0
