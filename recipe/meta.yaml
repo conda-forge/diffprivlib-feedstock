@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffprivlib-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/diffprivlib-{{ version }}.tar.gz
   sha256: 9a126078670a0663bd27778041905139c8023dbc22ef04f86e616b6bfd1cc138
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - joblib >=0.16.0
     - numpy >=1.19.0
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-learn >=0.23.0
     - scipy >=1.5.0
     - setuptools >=49.0.0
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/IBM/differential-privacy-library
